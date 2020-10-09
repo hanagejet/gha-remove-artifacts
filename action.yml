@@ -1,5 +1,5 @@
 name: 'Remove artifacts'
-author: 'c-hive'
+author: 'hanagejet'
 description: ''
 runs:
   using: 'node12'
