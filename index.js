@@ -30,7 +30,6 @@ function getConfigs() {
   const [age, units] = readInput(inputKeys.AGE, true).split(" ");
   const maxAge = moment().subtract(age, units);
 
-  console.log('test');
   console.log(
     "Maximum artifact age:",
     age,
@@ -136,6 +135,7 @@ async function run() {
       if (stopPagination) {
         done();
       }
+      console.log(JSON.stringify(data, null, 4));
 
       return data;
     })
@@ -165,7 +165,6 @@ async function run() {
           return octokit.paginate(workflowRunArtifactsRequest).then(artifacts =>
             artifacts
               .filter(artifact => {
-                console.log(JSON.stringify(artifact, null, 4));
                 const skipRecentArtifact =
                   configs.skipRecent &&
                   configs.skipRecent > skippedArtifactsCounter;
