@@ -164,6 +164,7 @@ async function run() {
           return octokit.paginate(workflowRunArtifactsRequest).then(artifacts =>
             artifacts
               .filter(artifact => {
+                console.log(JSON.stringify(artifact, null, 4));
                 const skipRecentArtifact =
                   configs.skipRecent &&
                   configs.skipRecent > skippedArtifactsCounter;
