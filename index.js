@@ -30,6 +30,7 @@ function getConfigs() {
   const [age, units] = readInput(inputKeys.AGE, true).split(" ");
   const maxAge = moment().subtract(age, units);
 
+  console.log('test');
   console.log(
     "Maximum artifact age:",
     age,

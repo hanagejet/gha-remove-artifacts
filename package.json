@@ -10,10 +10,6 @@
     "lint": "eslint . --no-error-on-unmatched-pattern",
     "lint:fix": "eslint . --no-error-on-unmatched-pattern --fix"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
   "keywords": [
     "github",
     "action",
